@@ -1,0 +1,28 @@
+import random
+
+secret= random.randint(1, 10)
+
+counter= 0
+
+try:
+    guess = int(input("Guess a number between 1 and 10: "))
+except ValueError:
+    print("Please enter a number, not a word!")
+    guess = int(input("Guess a number between 1 and 10: "))
+
+while guess != secret:
+    if guess < 1 or guess >  10:
+       print("Invalid number! Enter between 1 and 10")
+    elif guess > secret:
+        print("Too high! Try again!")
+    else:
+        print("Too low! Try again")   
+    try:
+        guess = int(input("Guess a number between 1 and 10: "))
+    except ValueError:
+        print("Please enter a number, not a word!")
+        guess = int(input("Try again: "))
+    counter = counter + 1
+
+print("Correct! 🎉:You got it in : ", counter, "Times")
+
