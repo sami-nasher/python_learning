@@ -16,7 +16,7 @@ while guess != secret:
     elif guess > secret:
         print("Too high! Try again!")
     else:
-        print("Too low! Try again")   
+        print("Too low! Try again") 
     try:
         guess = int(input("Guess a number between 1 and 50: "))
     except ValueError:
@@ -25,4 +25,4 @@ while guess != secret:
     counter = counter + 1
 
 print("Correct! 🎉:You got it in : ", counter, "Times")
-
+# Already up to date.
