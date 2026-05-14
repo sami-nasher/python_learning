@@ -1,5 +1,10 @@
 #!/bin/bash
-echo "Hello Sami!"
-echo "Today is a great day!"
-echo "File in this folder:"
-ls
+
+echo "What is your commit message?"
+read message
+
+git add .
+git commit -m "$message"
+git push
+
+echo "Done! Code pushed to GitHub successfully."
